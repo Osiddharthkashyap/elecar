@@ -1,0 +1,34 @@
+.brand1 {
+    width: 50px; height: 50px;
+    background: url('images\brands-sprite.png') -80px -10px;
+}
+
+.brand2 {
+    width: 50px; height: 18px;
+    background: url('images\brands-sprite.png') -10px -158px;
+}
+
+.brand3 {
+    width: 50px; height: 50px;
+    background: url('images\brands-sprite.png') -150px -10px;
+}
+
+.brand4 {
+    width: 50px; height: 58px;
+    background: url('images\brands-sprite.png') -10px -10px;
+}
+
+.brand5 {
+    width: 50px; height: 50px;
+    background: url('images\brands-sprite.png') -10px -88px;
+}
+
+.brand6 {
+    width: 50px; height: 44px;
+    background: url('images\brands-sprite.png') -150px -88px;
+}
+
+.brands {
+    width: 50px; height: 50px;
+    background: url('images\brands-sprite.png') -80px -88px;
+}
