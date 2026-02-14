@@ -1,3 +1,27 @@
+:root {
+    --body-color: rgba(10, 10, 11, 1);
+    --container-color: rgba(17, 18, 19, 1);
+    --primary-color: rgba(65, 119, 220, 1);
+    --primary-light: rgba(147, 177, 235, 1);
+    --secondary-color: rgba(48, 106, 217, 1);
+    --secondary-light: rgba(96, 140, 226, 1);
+    --white-color: rgba(255, 255, 255, 1);
+    --text-title-color: rgba(241, 242, 243, 1);
+    --text-color: rgba(186, 190, 196, 1);
+    --text-darker-color: rgba(136, 139, 145, 1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsba(219, 8%, 4%, 1);
+}
+
+/* brand sprite setup */
 .brand1 {
     width: 50px; height: 50px;
     background: url('images\brands-sprite.png') -80px -10px;
