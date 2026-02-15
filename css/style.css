@@ -11,48 +11,109 @@
     --text-darker-color: rgba(136, 139, 145, 1);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
-body{
-    background-color: hsba(219, 8%, 4%, 1);
+body {
+    background-color: var(--body-color);
 }
 
 /* brand sprite setup */
 .brand1 {
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     background: url('images\brands-sprite.png') -80px -10px;
 }
 
 .brand2 {
-    width: 50px; height: 18px;
+    width: 50px;
+    height: 18px;
     background: url('images\brands-sprite.png') -10px -158px;
 }
 
 .brand3 {
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     background: url('images\brands-sprite.png') -150px -10px;
 }
 
 .brand4 {
-    width: 50px; height: 58px;
+    width: 50px;
+    height: 58px;
     background: url('images\brands-sprite.png') -10px -10px;
 }
 
 .brand5 {
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     background: url('images\brands-sprite.png') -10px -88px;
 }
 
 .brand6 {
-    width: 50px; height: 44px;
+    width: 50px;
+    height: 44px;
     background: url('images\brands-sprite.png') -150px -88px;
 }
 
 .brands {
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     background: url('images\brands-sprite.png') -80px -88px;
+}
+
+/* navbar */
+.navbar img {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar .brand-logo {
+    font-family: "Exo";
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navbar .navbar-toggler-icon {
+    filter: invert() brightness(2);
+    width: 20px;
+    height: 20px;
+}
+
+.navbar .offcanvas {
+    background-color: rgba(255, 255, 255, 0.842);
+    filter: blur(96);
+}
+
+.navbar .nav-link {
+    font-family: "Exo";
+    font-size: 2rem;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .brand-logo {
+        font-size: 1.6rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
 }
