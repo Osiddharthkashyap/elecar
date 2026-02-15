@@ -119,26 +119,76 @@ body {
 }
 
 /* statCards */
-.statCards{
+.statCards {
     max-width: 360px;
     margin: 0 auto;
 }
-.statCard{
+
+.statCard {
     font-family: "Exo";
 }
 
-.statCard .statCard__icon{
+.statCard .statCard__icon {
     width: 24px;
     height: 24px;
     background-color: var(--container-color);
 }
 
-.statCard__value{
+.statCard__value {
     font-size: 2rem;
     font-weight: 500;
 }
-.statCard__title{
+
+.statCard__title {
     font-size: 1rem;
     color: var(--text-darker-color);
     font-weight: 400;
+}
+
+/* hero */
+.hero {
+    font-family: "Exo";
+}
+
+.hero__heading .hero__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.hero__heading .hero__car-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.hero__heading .hero__car-type {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.hero__heading .hero__car-type i {
+    color: var(--primary-color);
+}
+
+.hero__image {
+    min-width: 300px;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__heading .hero__title {
+        font-size: 3.6rem;
+        font-weight: 600;
+    }
+
+    .hero__heading .hero__car-name {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    .hero__heading .hero__car-type {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--text-color);
+    }
 }
