@@ -269,3 +269,68 @@ body {
     }
 
 }
+
+/* card */
+.car {
+    font-family: "Exo";
+    background-color: var(--container-color);
+    max-width: 300px;
+    gap: 20px;
+    padding: 2.6rem 2.6rem 1.8rem 2.6rem;
+    overflow: hidden;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(55, 74, 109, 0.5);
+    transform: translate(-50%, -50%);
+    filter: blur(120px);
+    z-index: 2;
+}
+
+.car__title {
+    z-index: 4;
+}
+
+.car__family {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-title-color);
+    line-height: 140%;
+}
+
+.car__name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 140%;
+}
+
+.car__image {
+    min-width: 160px;
+    max-width: 200px;
+    align-self: flex-end;
+}
+
+.car__purchase {
+    padding: 1.4rem 3.2rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    border-radius: 20px 0 20px 0;
+    padding: 1.2rem 1.6rem;
+}
+
+.car__price {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.car__purchase i {
+    width: 2.4rem;
+    height: 2.4rem;
+}

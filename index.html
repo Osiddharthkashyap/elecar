@@ -33,24 +33,22 @@
 </head>
 
 <body>
-    <section class="about container row row-cols-1 row-cols-md-2 align-items-center g-4 p-4 mx-auto">
-        <div class="col about__image position-relative mb-md-0">
-            <img class="img-fluid rounded-5" src="images/cars/car-inside.png" alt="About Desino">
-            <div class="about__image-text text-center position-absolute p-4 rounded-5">
-                <h2 class="text-white">2.500+</h2>
-                <p>Supercharges placed along popular routes</p>
-            </div>
+    <article class="car d-flex flex-column align-items-start rounded-5 position-relative">
+        <div class="gradient-overlay"></div>
+        <div class="car__title">
+            <h2 class="car__family">Porche 2</h2>
+            <p class="car__name">Turbo S</p>
         </div>
-
-        <div class="col about__content d-flex flex-column gap-4 align-items-start justify-content-center py-md-5">
-            <h2 class="fw-bold">Machines With <br>
-                Future Technology</h2>
-            <p class="lead">See the future with high-performance electric cars produced by renowned brands. They feature
-                futuristic builds and designs with new and innovative platforms that last a long time.</p>
-            <a href="#" class="btn no-stretch text-white">Know More</a>
+        <img class="car__image" src="images/cars/turbo-s.png" alt="Turbo S">
+        <div class="car__info d-flex flex-wrap">
+            <p class="car__info-item text-white"><i class="bi bi-speedometer"></i> 3.7 seconds</p>
+            <p class="car__info-item text-white ms-5"><i class="bi bi-graph-up-arrow"></i> 330 km/h</p>
+            <p class="car__info-item text-white"><i class="bi bi-ev-station"></i> Electric</p>
         </div>
-
-    </section>
+        <p class="car__price text-white">$175,900</p>
+        <p class="car__purchase position-absolute bottom-0 end-0 cursor-pointer m-0"><i
+                class="bi bi-bag text-white"></i></p>
+    </article>
 </body>
 
 </html>
