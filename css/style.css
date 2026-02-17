@@ -20,6 +20,7 @@
 
 body {
     background-color: var(--body-color);
+    /* overflow: hidden; */
 }
 
 /* brand sprite setup */
@@ -191,4 +192,80 @@ body {
         font-weight: 400;
         color: var(--text-color);
     }
+}
+
+/* about */
+.about {
+    font-family: "Exo";
+    /* gap: 40px; */
+    padding-inline: auto;
+    max-width: 1024px;
+}
+
+.about__image {
+    margin-bottom: 8rem;
+}
+
+.about__image-text {
+    transform: translateY(-50%);
+    right: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    max-width: 220px;
+}
+
+.about__image-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.about__image-text p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.about__content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-title-color);
+    line-height: 140%;
+}
+
+.about__content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 24px;
+    line-height: 140%;
+}
+
+.about__content .btn {
+    padding: 1.4rem 3.2rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        flex-direction: row;
+    }
+
+    .about__content {
+        padding-left: 30px;
+    }
+
+    .about__content h2 {
+        font-size: 2.4rem;
+
+    }
+
+    .about__content p {
+        font-size: 1.6rem;
+    }
+
+    .about__content .btn {
+        font-size: 1.6rem;
+    }
+
 }
