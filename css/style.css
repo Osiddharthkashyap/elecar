@@ -206,23 +206,34 @@ body {
     margin-bottom: 8rem;
 }
 
-.about__image-text {
-    transform: translateY(-50%);
-    right: 8px;
+.info-text {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
     max-width: 220px;
 }
 
-.about__image-text h2 {
-    font-size: 2rem;
+.info-text h2 {
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 140%;
 }
 
-.about__image-text p {
-    font-size: 1.3rem;
+.info-text p {
+    font-size: 1.2rem;
     color: var(--text-color);
+}
+
+.about__image .info-text {
+    transform: translateY(-50%);
+    right: 8px;
+}
+
+.about__image .info-text h2 {
+    font-size: 2rem;
+}
+
+.about__image .info-text p {
+    font-size: 1.3rem;
 }
 
 .about__content h2 {
@@ -271,7 +282,7 @@ body {
 }
 
 /* car gallery */
-.cars{
+.cars {
     width: calc(100% - 4rem);
     padding-bottom: 50px !important;
     overflow: hidden;
@@ -357,7 +368,48 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .cars h2{
+    .cars h2 {
         font-size: 2.4rem;
+    }
+}
+
+/* more features */
+.more-feature {
+    background: url("../images/map.png") no-repeat center center;
+    background-size: 120%;
+    max-width: 650px;
+}
+
+.more-feature h2 {
+    font-family: "Exo";
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-title-color);
+    line-height: 140%;
+}
+
+.more-features__list {
+    font-family: "Exo";
+    min-width: 360px;
+}
+
+.more-features__content img {
+    width: 150px;
+}
+
+.more-features__list .about__image-text {
+    position: relative;
+}
+
+.more-features__content .info-text {
+    width: 120px;
+    max-height: 100px;
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 768px) {
+    .more-feature>h2 {
+        font-size: 2.4rem;
+        margin-bottom: 100px;
     }
 }
