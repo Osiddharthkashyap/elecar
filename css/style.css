@@ -270,25 +270,39 @@ body {
 
 }
 
-/* card */
-.car {
-    font-family: "Exo";
-    background-color: var(--container-color);
-    max-width: 300px;
-    gap: 20px;
-    padding: 2.6rem 2.6rem 1.8rem 2.6rem;
+/* car gallery */
+.cars{
+    width: calc(100% - 4rem);
+    padding-bottom: 50px !important;
     overflow: hidden;
 }
 
+.cars h2 {
+    font-family: "Exo";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.car {
+    background-color: var(--container-color);
+    font-family: "Exo";
+    gap: 20px;
+    max-width: 300px;
+    min-width: 280px;
+    overflow: hidden;
+    padding: 2.6rem 2.6rem 1.8rem 2.6rem;
+}
+
 .gradient-overlay {
+    background-color: rgba(55, 74, 109, 0.5);
+    filter: blur(120px);
+    height: 50%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background-color: rgba(55, 74, 109, 0.5);
     transform: translate(-50%, -50%);
-    filter: blur(120px);
+    width: 50%;
     z-index: 2;
 }
 
@@ -297,16 +311,16 @@ body {
 }
 
 .car__family {
+    color: var(--text-title-color);
     font-size: 2rem;
     font-weight: 600;
-    color: var(--text-title-color);
     line-height: 140%;
 }
 
 .car__name {
+    color: var(--text-color);
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--text-color);
     line-height: 140%;
 }
 
@@ -317,11 +331,11 @@ body {
 }
 
 .car__purchase {
-    padding: 1.4rem 3.2rem;
-    font-weight: 500;
     background-color: var(--primary-color);
     border-radius: 20px 0 20px 0;
+    font-weight: 500;
     padding: 1.2rem 1.6rem;
+    padding: 1.4rem 3.2rem;
 }
 
 .car__price {
@@ -333,4 +347,18 @@ body {
 .car__purchase i {
     width: 2.4rem;
     height: 2.4rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4a90e2 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .cars h2{
+        font-size: 2.4rem;
+    }
 }
