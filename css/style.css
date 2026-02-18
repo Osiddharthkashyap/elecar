@@ -44,8 +44,9 @@ body {
 
 .brand4 {
     width: 50px;
-    height: 58px;
-    background: url('../images/brands-sprite.png') -10px -10px;
+    height: 50px;
+    background: url('../images/brands-sprite.png') -80px -88px;
+
 }
 
 .brand5 {
@@ -58,12 +59,6 @@ body {
     width: 50px;
     height: 44px;
     background: url('../images/brands-sprite.png') -150px -88px;
-}
-
-.brands {
-    width: 50px;
-    height: 50px;
-    background: url('../images/brands-sprite.png') -80px -88px;
 }
 
 /* navbar */
@@ -527,5 +522,26 @@ body {
 @media screen and (min-width: 768px) {
     .offer-section__image {
         margin: 0;
+    }
+}
+
+/* brand gallery */
+.brand-gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 600px;
+    gap: 20px;
+}
+
+.brand-gallery .grid li {
+    width: 50px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .brand-gallery .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
     }
 }
