@@ -15,12 +15,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Exo", "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 62.5%;
 }
 
 body {
     background-color: var(--body-color);
     /* overflow: hidden; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 /* brand sprite setup */
@@ -62,13 +68,12 @@ body {
 }
 
 /* navbar */
-.navbar img {
+.brand img {
     width: 20px;
     height: 20px;
 }
 
-.navbar .brand-logo {
-    font-family: "Exo";
+.brand-name {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -85,7 +90,6 @@ body {
 }
 
 .navbar .nav-link {
-    font-family: "Exo";
     font-size: 2rem;
     color: var(--white-color);
     transition: all 0.3s ease;
@@ -103,7 +107,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .navbar .brand-logo {
+    .brand-name {
         font-size: 1.6rem;
     }
 
@@ -118,10 +122,6 @@ body {
 .statCards {
     max-width: 360px;
     margin: 0 auto;
-}
-
-.statCard {
-    font-family: "Exo";
 }
 
 .statCard .statCard__icon {
@@ -142,9 +142,6 @@ body {
 }
 
 /* hero */
-.hero {
-    font-family: "Exo";
-}
 
 .hero__heading .hero__title {
     font-size: 2.4rem;
@@ -191,7 +188,6 @@ body {
 
 /* about */
 .about {
-    font-family: "Exo";
     /* gap: 40px; */
     padding-inline: auto;
     max-width: 1024px;
@@ -247,7 +243,6 @@ body {
 }
 
 .btn--primary {
-    font-family: "Exo";
     color: var(--white-color);
     padding: 1.4rem 3.2rem;
     font-weight: 500;
@@ -286,7 +281,6 @@ body {
 }
 
 .cars h2 {
-    font-family: "Exo";
     font-size: 2rem;
     font-weight: 600;
     line-height: 140%;
@@ -294,7 +288,6 @@ body {
 
 .car {
     background-color: var(--container-color);
-    font-family: "Exo";
     gap: 20px;
     max-width: 300px;
     min-width: 280px;
@@ -378,7 +371,6 @@ body {
 }
 
 .more-feature h2 {
-    font-family: "Exo";
     font-size: 2rem;
     font-weight: 600;
     color: var(--text-title-color);
@@ -386,7 +378,6 @@ body {
 }
 
 .more-features__list {
-    font-family: "Exo";
     min-width: 360px;
 }
 
@@ -413,7 +404,6 @@ body {
 
 /* more features */
 .feature-filter {
-    font-family: "Exo";
     max-width: 1024px;
     gap: 50px;
 }
@@ -500,14 +490,12 @@ body {
 }
 
 .offer-section__title {
-    font-family: "Exo";
     font-size: 2rem;
     font-weight: 600;
     line-height: 140%;
 }
 
 .offer-section__description {
-    font-family: "Exo";
     font-size: 1.5rem;
     color: var(--text-color);
     margin-block: 24px;
@@ -543,5 +531,53 @@ body {
     .brand-gallery .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 20px;
+    }
+}
+
+/* footer */
+.footer .col h5 {
+    color: var(--text-title-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.footer .col ul,
+.footer .col p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.footer .copyright {
+    font-size: 1.5rem;
+    color: var(--text-darker-color);
+}
+
+.footer .brand img {
+    width: 28px;
+    height: 28px;
+}
+
+.footer .brand .brand-name {
+    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .col h5 {
+        font-size: 2rem;
+    }
+
+    .footer .col ul {
+        font-size: 1.6rem;
+    }
+
+    .footer .col p {
+        font-size: 1.3rem;
+    }
+
+    .footer .copyright {
+        font-size: 1.2rem;
     }
 }
