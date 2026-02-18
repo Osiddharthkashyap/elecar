@@ -251,7 +251,9 @@ body {
     line-height: 140%;
 }
 
-.about__content .btn {
+.btn--primary {
+    font-family: "Exo";
+    color: var(--white-color);
     padding: 1.4rem 3.2rem;
     font-weight: 500;
     background-color: var(--primary-color);
@@ -487,5 +489,43 @@ body {
 
     .feature-filter h2 {
         font-size: 2.4rem;
+    }
+}
+
+/* offer section */
+.offer-section {
+    background: url("../images/subscribe-bg.png") no-repeat center center;
+    overflow: hidden;
+    background-size: cover;
+    padding: 60px 40px;
+}
+
+.offer-section__content {
+    max-width: 400px;
+}
+
+.offer-section__title {
+    font-family: "Exo";
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.offer-section__description {
+    font-family: "Exo";
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-block: 24px;
+}
+
+.offer-section__image {
+    width: 400px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .offer-section__image {
+        margin: 0;
     }
 }
