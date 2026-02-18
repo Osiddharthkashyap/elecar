@@ -27,43 +27,43 @@ body {
 .brand1 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -80px -10px;
+    background: url('../images/brands-sprite.png') -80px -10px;
 }
 
 .brand2 {
     width: 50px;
-    height: 18px;
-    background: url('images\brands-sprite.png') -10px -158px;
+    height: 60px;
+    background: url('../images/brands-sprite.png') -10px -158px;
 }
 
 .brand3 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -150px -10px;
+    background: url('../images/brands-sprite.png') -150px -10px;
 }
 
 .brand4 {
     width: 50px;
     height: 58px;
-    background: url('images\brands-sprite.png') -10px -10px;
+    background: url('../images/brands-sprite.png') -10px -10px;
 }
 
 .brand5 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -10px -88px;
+    background: url('../images/brands-sprite.png') -10px -88px;
 }
 
 .brand6 {
     width: 50px;
     height: 44px;
-    background: url('images\brands-sprite.png') -150px -88px;
+    background: url('../images/brands-sprite.png') -150px -88px;
 }
 
 .brands {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -80px -88px;
+    background: url('../images/brands-sprite.png') -80px -88px;
 }
 
 /* navbar */
@@ -411,5 +411,81 @@ body {
     .more-feature>h2 {
         font-size: 2.4rem;
         margin-bottom: 100px;
+    }
+}
+
+/* more features */
+.feature-filter {
+    font-family: "Exo";
+    max-width: 1024px;
+    gap: 50px;
+}
+
+.feature-filter h2 {
+    color: var(--text-title-color);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.feature-filter__results {
+    gap: 40px;
+}
+
+.feature-filter__results .gradient-overlay {
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(55, 74, 109, 0.5);
+    z-index: 2;
+    filter: blur(120px);
+}
+
+.feature-filter__results .car__image {
+    align-self: flex-start;
+}
+
+.feature-filter li {
+    width: 50px;
+    height: 50px;
+    background-color: var(--container-color);
+    transition: all 0.3s ease;
+}
+
+.feature-filter li button {
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.feature-filter li:hover {
+    background-color: var(--text-darker-color);
+}
+
+.feature-filter .active {
+    background-color: var(--primary-color);
+}
+
+.feature-filter .active button {
+    color: var(--white-color);
+}
+
+.feature-filter li .brand {
+    transform: scale(0.5);
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    .feature-filter__results {
+        gap: 60px;
+    }
+
+    .feature-filter h2 {
+        font-size: 2.4rem;
     }
 }
