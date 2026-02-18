@@ -581,3 +581,34 @@ a {
         font-size: 1.2rem;
     }
 }
+
+/* start component */
+.start-component {
+    height: 160px;
+}
+
+.start-component .start::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(9, 146, 96, 1);
+    border-radius: 50%;
+
+}
+
+.start-component .start::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(9, 146, 96, 1);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 16px rgba(2, 219, 138, 1));
+}
