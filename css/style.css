@@ -288,22 +288,38 @@ a {
     .about__content p {
         font-size: 1.6rem;
     }
-
-    .about__content .btn {
-        font-size: 1.6rem;
-    }
-
 }
 
-/* card */
+/* car gallery */
+.cars {
+    max-width: 800px;
+    padding-bottom: 50px !important;
+    overflow: hidden;
+    margin-inline: auto;
+    margin-bottom: 100px;
+    width: 95%;
+    padding-inline: 1rem;
+}
+
+.cars h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
 .car {
-    font-family: "Exo";
     background-color: var(--container-color);
+    gap: 20px;
     max-width: 300px;
     min-width: 280px;
     overflow: hidden;
     padding: 2.6rem 2.6rem 1.8rem 2.6rem;
-    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.car:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .gradient-overlay {
@@ -354,7 +370,16 @@ a {
 .car__purchase {
     background-color: var(--primary-color);
     border-radius: 20px 0 20px 0;
-    padding: 1.2rem 1.6rem;
+    font-weight: 500;
+    padding: 1.4rem 3.2rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn--primary:hover,
+.car__purchase:hover {
+    background-color: var(--primary-light);
 }
 
 .car__price {
@@ -366,4 +391,350 @@ a {
 .car__purchase i {
     width: 2.4rem;
     height: 2.4rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4a90e2 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .cars h2 {
+        font-size: 2.4rem;
+    }
+}
+
+/* more features */
+.more-feature {
+    background: url("../images/map.png") no-repeat center center;
+    background-size: 120%;
+    max-width: 650px;
+    margin-inline: auto;
+    margin-bottom: 80px;
+    padding-inline: 1rem;
+}
+
+.more-feature h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-title-color);
+    line-height: 140%;
+}
+
+.more-features__list {
+    min-width: 360px;
+}
+
+.more-features__content img {
+    width: 150px;
+}
+
+.more-features__list .about__image-text {
+    position: relative;
+}
+
+.more-features__content .info-text {
+    width: 120px;
+    max-height: 100px;
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 768px) {
+    .more-feature>h2 {
+        font-size: 2.4rem;
+        margin-bottom: 100px;
+    }
+}
+
+/* feature filter */
+.feature-filter {
+    max-width: 1024px;
+    margin-inline: auto;
+    gap: 50px;
+    padding-inline: 1rem;
+    width: 100%;
+}
+
+.feature-filter h2 {
+    color: var(--text-title-color);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.feature-filter__results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    row-gap: 40px;
+    width: 90%;
+}
+
+.feature-filter__results .car {
+    align-self: center;
+    justify-self: center;
+}
+
+.feature-filter__results .gradient-overlay {
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(55, 74, 109, 0.5);
+    z-index: 2;
+    filter: blur(120px);
+}
+
+.feature-filter__results .car__image {
+    align-self: flex-start;
+}
+
+.feature-filter__options {
+    padding-inline: 1rem;
+    font-size: 1.6rem;
+}
+
+.feature-filter li {
+    width: 50px;
+    height: 50px;
+    background-color: var(--container-color);
+    transition: all 0.3s ease;
+}
+
+.feature-filter li button {
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.feature-filter li:hover {
+    background-color: var(--text-darker-color);
+}
+
+.feature-filter .active {
+    background-color: var(--primary-color);
+}
+
+.feature-filter .active button {
+    color: var(--white-color);
+}
+
+.feature-filter li .brand {
+    transform: scale(0.5);
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    .feature-filter h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .feature-filter__results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* offer section */
+.offer-section {
+    background: url("../images/subscribe-bg.png") no-repeat center center;
+    overflow: hidden;
+    background-size: cover;
+    padding: 60px 40px;
+    margin-inline: auto;
+    margin-block: 60px;
+    width: 100%;
+}
+
+.offer-section__content {
+    max-width: 400px;
+    padding-inline: 1rem;
+}
+
+.offer-section__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.offer-section__description {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-block: 24px;
+}
+
+.offer-section .btn,
+.about__content .btn {
+    font-size: 1.6rem;
+}
+
+.offer-section__image {
+    width: 400px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .offer-section__image {
+        margin: 0;
+    }
+}
+
+/* brand gallery */
+.brand-gallery {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.brand-gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 600px;
+    margin-inline: auto;
+    gap: 20px;
+    margin-block: 60px;
+}
+
+.brand-gallery .grid li {
+    width: 50px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .brand-gallery .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* footer */
+.footer {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.footer .col h5 {
+    color: var(--text-title-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.footer .col ul li a,
+.footer .col ul i,
+.footer .col p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.footer .copyright {
+    font-size: 1.5rem;
+    color: var(--text-darker-color);
+}
+
+.footer .brand img {
+    width: 28px;
+    height: 28px;
+}
+
+.footer .brand .brand__name {
+    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .col h5 {
+        font-size: 2rem;
+    }
+
+    .footer .col ul li a,
+    .footer .col ul i {
+        font-size: 1.6rem;
+    }
+
+    .footer .col p {
+        font-size: 1.3rem;
+    }
+
+    .footer .copyright {
+        font-size: 1.2rem;
+    }
+}
+
+/* start component */
+.start-component {
+    height: 160px;
+    margin-block: 40px;
+}
+
+.start-component .start {
+    font-size: 1.4rem;
+}
+
+.start-component .start::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(9, 146, 96, 1);
+    border-radius: 50%;
+
+}
+
+.start-component .start::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(9, 146, 96, 1);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 16px rgba(2, 219, 138, 1));
+}
+
+.header,
+.footer {
+    overflow: hidden;
+}
+
+.overlay-effect::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    left: -120px;
+    background-color: rgba(55, 74, 109, 0.5);
+    filter: blur(180px);
+    z-index: 20;
+}
+
+.overlay-effect::after {
+    background-color: rgba(55, 74, 109, 0.5);
+    bottom: -28px;
+    content: "";
+    filter: blur(180px);
+    height: 300px;
+    position: absolute;
+    right: -100px;
+    width: 300px;
+    z-index: 20;
 }
