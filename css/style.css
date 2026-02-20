@@ -9,71 +9,85 @@
     --text-title-color: rgba(241, 242, 243, 1);
     --text-color: rgba(186, 190, 196, 1);
     --text-darker-color: rgba(136, 139, 145, 1);
+    scroll-behavior: smooth;
+
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Exo", "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 62.5%;
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     background-color: var(--body-color);
-    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.brand {
+    z-index: 3000;
 }
 
 /* brand sprite setup */
 .brand1 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -80px -10px;
+    background: url('../images/brands-sprite.png') -80px -10px;
 }
 
 .brand2 {
     width: 50px;
-    height: 18px;
-    background: url('images\brands-sprite.png') -10px -158px;
+    height: 60px;
+    background: url('../images/brands-sprite.png') -10px -158px;
 }
 
 .brand3 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -150px -10px;
+    background: url('../images/brands-sprite.png') -150px -10px;
 }
 
 .brand4 {
     width: 50px;
-    height: 58px;
-    background: url('images\brands-sprite.png') -10px -10px;
+    height: 50px;
+    background: url('../images/brands-sprite.png') -80px -88px;
+
 }
 
 .brand5 {
     width: 50px;
     height: 50px;
-    background: url('images\brands-sprite.png') -10px -88px;
+    background: url('../images/brands-sprite.png') -10px -88px;
 }
 
 .brand6 {
     width: 50px;
     height: 44px;
-    background: url('images\brands-sprite.png') -150px -88px;
-}
-
-.brands {
-    width: 50px;
-    height: 50px;
-    background: url('images\brands-sprite.png') -80px -88px;
+    background: url('../images/brands-sprite.png') -150px -88px;
 }
 
 /* navbar */
-.navbar img {
+.brand img {
     width: 20px;
     height: 20px;
 }
 
-.navbar .brand-logo {
-    font-family: "Exo";
+.brand__name {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -86,11 +100,15 @@ body {
 
 .navbar .offcanvas {
     background-color: rgba(255, 255, 255, 0.842);
-    filter: blur(96);
+    backdrop-filter: blur(16px);
+    max-width: 100%;
+}
+
+.navbar .offcanvas-header i {
+    font-size: 2rem;
 }
 
 .navbar .nav-link {
-    font-family: "Exo";
     font-size: 2rem;
     color: var(--white-color);
     transition: all 0.3s ease;
@@ -108,7 +126,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    .navbar .brand-logo {
+    .brand__name {
         font-size: 1.6rem;
     }
 
@@ -125,14 +143,14 @@ body {
     margin: 0 auto;
 }
 
-.statCard {
-    font-family: "Exo";
-}
-
 .statCard .statCard__icon {
     width: 24px;
     height: 24px;
     background-color: var(--container-color);
+}
+
+.statCard__icon i {
+    font-size: 1.2rem;
 }
 
 .statCard__value {
@@ -147,10 +165,6 @@ body {
 }
 
 /* hero */
-.hero {
-    font-family: "Exo";
-}
-
 .hero__heading .hero__title {
     font-size: 2.4rem;
     font-weight: 600;
@@ -161,8 +175,9 @@ body {
     font-weight: 600;
 }
 
-.hero__heading .hero__car-type {
-    font-size: 1.2rem;
+.hero__heading .hero__car-type,
+.hero__car-name .hero__car-type i {
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-color);
 }
@@ -179,50 +194,56 @@ body {
 @media screen and (min-width: 768px) {
     .hero__heading .hero__title {
         font-size: 3.6rem;
-        font-weight: 600;
     }
 
     .hero__heading .hero__car-name {
         font-size: 2.4rem;
-        font-weight: 600;
-    }
-
-    .hero__heading .hero__car-type {
-        font-size: 1.6rem;
-        font-weight: 400;
-        color: var(--text-color);
     }
 }
 
 /* about */
 .about {
-    font-family: "Exo";
-    /* gap: 40px; */
-    padding-inline: auto;
     max-width: 1024px;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    padding-inline: 1rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
 }
 
 .about__image {
     margin-bottom: 8rem;
 }
 
-.about__image-text {
-    transform: translateY(-50%);
-    right: 8px;
+.info-text {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
     max-width: 220px;
 }
 
-.about__image-text h2 {
-    font-size: 2rem;
+.info-text h2 {
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 140%;
 }
 
-.about__image-text p {
-    font-size: 1.3rem;
+.info-text p {
+    font-size: 1.2rem;
     color: var(--text-color);
+}
+
+.about__image .info-text {
+    transform: translateY(-50%);
+    right: 8px;
+}
+
+.about__image .info-text h2 {
+    font-size: 2rem;
+}
+
+.about__image .info-text p {
+    font-size: 1.3rem;
 }
 
 .about__content h2 {
@@ -240,15 +261,19 @@ body {
     line-height: 140%;
 }
 
-.about__content .btn {
+.btn--primary {
+    color: var(--white-color);
     padding: 1.4rem 3.2rem;
     font-weight: 500;
     background-color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 768px) {
     .about {
         flex-direction: row;
+        margin-bottom: 120px;
+        margin-top: 40px;
     }
 
     .about__content {
@@ -270,28 +295,15 @@ body {
 
 }
 
-/* car gallery */
-.cars{
-    width: calc(100% - 4rem);
-    padding-bottom: 50px !important;
-    overflow: hidden;
-}
-
-.cars h2 {
-    font-family: "Exo";
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 140%;
-}
-
+/* card */
 .car {
-    background-color: var(--container-color);
     font-family: "Exo";
-    gap: 20px;
+    background-color: var(--container-color);
     max-width: 300px;
     min-width: 280px;
     overflow: hidden;
     padding: 2.6rem 2.6rem 1.8rem 2.6rem;
+    overflow: hidden;
 }
 
 .gradient-overlay {
@@ -330,12 +342,19 @@ body {
     align-self: flex-end;
 }
 
+.car__info-item {
+    font-size: 1.2rem;
+}
+
+.car__info-item i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
 .car__purchase {
     background-color: var(--primary-color);
     border-radius: 20px 0 20px 0;
-    font-weight: 500;
     padding: 1.2rem 1.6rem;
-    padding: 1.4rem 3.2rem;
 }
 
 .car__price {
@@ -347,18 +366,4 @@ body {
 .car__purchase i {
     width: 2.4rem;
     height: 2.4rem;
-}
-
-.swiper-pagination-bullet {
-    background-color: var(--text-color) !important;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #4a90e2 !important;
-}
-
-@media screen and (min-width: 768px) {
-    .cars h2{
-        font-size: 2.4rem;
-    }
 }
